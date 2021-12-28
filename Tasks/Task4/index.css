@@ -1,0 +1,45 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+html,body {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  place-items: center;
+  background: rgb(s2,0,36);
+  background: linear-gradient(135deg, rgb(134, 133, 144), rgba(25,23,45,1) ,rgba(93,93,120,0.9472163865546218));
+}
+.container {
+ height: 55px;
+ width: 25vw;
+ border: 1px solid green;
+background-color: rgb(6, 18, 34);
+ border-radius: 10px;
+ /* box-shadow: rgba(172, 161, 161, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(25, 7, 131, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+ /* box-shadow: rgba(24, 22, 22, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px; */
+ box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+ /* box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset; */
+}
+
+.container .clock {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+.container .clock .time {
+  font-size: 3.3vw;
+  letter-spacing: 2px;
+  color: rgb(176, 236, 11);
+  font-weight: bold;
+  text-shadow: 4px 2px 8px rgb(255, 13, 13);
+
+}
+
+
+
+
+
