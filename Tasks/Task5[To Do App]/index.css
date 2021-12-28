@@ -37,6 +37,11 @@ html,body{
     font-family: serif;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
+.innercontainer button.active {
+    opacity: 1;
+    pointer-events: auto;
+
+}
 .innercontainer button{
     width:180px;
     border-radius: 2px;
@@ -49,5 +54,12 @@ html,body{
     border: none;
     cursor: pointer;
     margin-left: 10px;
+    opacity: 0.3;
+    pointer-events: none;
     box-shadow: rgba(6, 6, 250, 0.25) 0px 30px 60px -12px inset, rgba(22, 203, 235, 0.3) 0px 18px 36px -18px inset;
+}
+.todolist{
+    width: 400px;
+    list-style: none;
+    font-size: 30px;
 }
