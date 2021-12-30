@@ -9,7 +9,7 @@ const result = document.getElementById('result');
 // console.log(select);
 // fetch the currency...
 fetch('https://api.frankfurter.app/currencies')
-.then((data) => data.json())
+.then((data) => data.json()) // convert the js object...
 .then((data) => {
     // console.log(data);
     display(data);
@@ -49,7 +49,8 @@ function convert(currency1, currency2, value) {
     fetch(`https://${host}/latest?amount=${value}&from=${currency1}&to=${currency2}`)
     .then((val) => val.json())
     .then((val) => {
-        // console.log(Object.values(val.rates)[0]);
+        // console.log(val);
+        // console.log(Object.values(val)[0]);
         result.value = Object.values(val.rates)[0];
     })
 }
