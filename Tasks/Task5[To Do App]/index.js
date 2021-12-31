@@ -19,6 +19,8 @@ $input.onkeyup = () => {
 }
 showtask(); // show task fuction calling...
 
+// debugger;
+
 // onclick function...
 $btn.onclick  = () => {
     let $userdata = $input.value;
@@ -35,7 +37,12 @@ $btn.onclick  = () => {
 }
 
 // show task function...
-function showtask() {
+
+async function showtask() {
+    let promise = await new Promise((resolve, reject) => {
+        setTimeout(() => resolve("resolved string"), 1000);
+    });
+
     let getLocalStorage = localStorage.getItem("New Todo");
     if(getLocalStorage == null) {
         listArr = [];
@@ -50,12 +57,62 @@ function showtask() {
     $input.value = ""; // after data added input field is empty...
 }
 
+// function showtask() {
+//     let getLocalStorage = localStorage.getItem("New Todo");
+//     if(getLocalStorage == null) {
+//         listArr = [];
+//     } else {
+//         listArr = JSON.parse(getLocalStorage);
+//     }
+//     let newlitag = ""; 
+//     listArr.forEach((element,index) => {
+//        newlitag += `<li ondblclick = "deletetask(${index})"; > ${element} </li>`; // ondblclick method to delete the task...
+//     });
+//     $todolist.innerHTML = newlitag; // add new li tag...
+//     $input.value = ""; // after data added input field is empty...
+// }
+
 // delete task function...
 function deletetask(index) {
     let getLocalStorage = localStorage.getItem("New Todo");
     listArr = JSON.parse(getLocalStorage);
     listArr.splice(index, 1); // delete the specific index list...
-// after delete update in local storage...
+    // after delete update in local storage...
     localStorage.setItem("New Todo", JSON.stringify(listArr));
     showtask();
 }
+
+
+
+
+
+
+
+
+
+
+
+//////////////////////////////////////////////////////
+
+// async function f() {
+
+//     let promise = new Promise((resolve, reject) => {
+//       setTimeout(() => resolve("done!"), 1000)
+//     });
+  
+//     let result = await promise; // wait until the promise resolves (*)
+  
+//     alert(result); // "done!"
+//   }
+//   f();
+
+///////////////////////////////////////////
+
+// async function doSomething() {
+//     let resolvedValue = await new Promise((res, rej) => {
+//         setTimeout(() => res("primeise adfasdf"), 1200);
+//     });
+//     console.log(resolvedValue);
+// }
+
+// doSomething();

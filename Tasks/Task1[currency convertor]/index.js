@@ -17,7 +17,7 @@ fetch('https://api.frankfurter.app/currencies')
 
 // Display function...
 function display(data) {
-    const entries = Object.entries(data);
+    const entries = Object.entries(data); // convert the array
     // console.log(entries.length); 
     
     // display all currency Name using for loop...
